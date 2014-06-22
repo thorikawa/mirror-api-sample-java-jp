@@ -5,10 +5,6 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>Mirror_api_sample</servlet-name>
-		<servlet-class>com.polysfactory.mirrorapisample.Mirror_api_sampleServlet</servlet-class>
-	</servlet>
-	<servlet>
 		<servlet-name>Auth</servlet-name>
 		<servlet-class>com.polysfactory.mirrorapisample.AuthServlet</servlet-class>
 	</servlet>
@@ -20,10 +16,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	    <servlet-name>InsertTimelineServlet</servlet-name>
 	    <servlet-class>com.polysfactory.mirrorapisample.InsertTimelineServlet</servlet-class>
 	</servlet>
-	<servlet-mapping>
-		<servlet-name>Mirror_api_sample</servlet-name>
-		<url-pattern>/mirror_api_sample</url-pattern>
-	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Auth</servlet-name>
 		<url-pattern>/auth</url-pattern>

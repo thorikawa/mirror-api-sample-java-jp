@@ -12,6 +12,7 @@ import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson.JacksonFactory;
 import com.google.api.services.mirror.Mirror;
+import com.google.api.services.mirror.model.NotificationConfig;
 import com.google.api.services.mirror.model.TimelineItem;
 
 @SuppressWarnings("serial")
@@ -37,11 +38,13 @@ public class InsertTimelineServlet extends HttpServlet {
 			resp.getWriter().println("認証を行ってください2");
 			return;
 		}
-		TimelineItem timelineitem = new TimelineItem();
-		timelineitem.setTitle("Hello world!");
+		TimelineItem timelineItem = new TimelineItem();
+		timelineItem.setText("Hello world!");
+		timelineItem.setNotification(new NotificationConfig()
+				.setLevel("DEFAULT"));
 		Mirror mirror = new Mirror.Builder(new NetHttpTransport(),
 				new JacksonFactory(), credential).build();
-		mirror.timeline().insert(timelineitem);
+		mirror.timeline().insert(timelineItem).execute();
 		resp.setContentType("text/html; charset=UTF-8");
 		resp.getWriter().println("タイムラインに送信しました");
 	}
