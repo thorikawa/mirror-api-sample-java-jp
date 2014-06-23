@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
 encoding//src/com/polysfactory/mirrorapisample/servlet/ContactServlet.java=UTF-8
+encoding//src/com/polysfactory/mirrorapisample/servlet/SubscriptionCallbackServlet.java=UTF-8
 encoding//src/com/polysfactory/mirrorapisample/servlet/TimelineServlet.java=UTF-8
 encoding//src/com/polysfactory/mirrorapisample/util/AuthUtil.java=UTF-8
