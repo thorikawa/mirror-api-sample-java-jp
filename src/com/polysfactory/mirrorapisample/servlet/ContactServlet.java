@@ -10,14 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.api.client.auth.oauth2.Credential;
-import com.google.api.client.googleapis.json.GoogleJsonResponseException;
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.jackson.JacksonFactory;
 import com.google.api.services.mirror.Mirror;
 import com.google.api.services.mirror.model.Command;
 import com.google.api.services.mirror.model.Contact;
 import com.google.api.services.mirror.model.Subscription;
 import com.polysfactory.mirrorapisample.util.AuthUtil;
+import com.polysfactory.mirrorapisample.util.MirrorUtil;
 import com.polysfactory.mirrorapisample.util.WebUtil;
 
 @SuppressWarnings("serial")
@@ -38,8 +36,7 @@ public class ContactServlet extends HttpServlet {
 			return;
 		}
 
-		Mirror mirror = new Mirror.Builder(new NetHttpTransport(),
-				new JacksonFactory(), credential).build();
+		Mirror mirror = MirrorUtil.newMirror(credential);
 
 		Contact contact = new Contact();
 		contact.setId(CONTACT_ID);

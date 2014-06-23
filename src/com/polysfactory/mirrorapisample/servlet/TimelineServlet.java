@@ -9,12 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.api.client.auth.oauth2.Credential;
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.jackson.JacksonFactory;
 import com.google.api.services.mirror.Mirror;
 import com.google.api.services.mirror.model.NotificationConfig;
 import com.google.api.services.mirror.model.TimelineItem;
 import com.polysfactory.mirrorapisample.util.AuthUtil;
+import com.polysfactory.mirrorapisample.util.MirrorUtil;
 
 @SuppressWarnings("serial")
 public class TimelineServlet extends HttpServlet {
@@ -35,8 +34,7 @@ public class TimelineServlet extends HttpServlet {
 		timelineItem.setText("Hello world!");
 		timelineItem.setNotification(new NotificationConfig()
 				.setLevel("DEFAULT"));
-		Mirror mirror = new Mirror.Builder(new NetHttpTransport(),
-				new JacksonFactory(), credential).build();
+		Mirror mirror = MirrorUtil.newMirror(credential);
 		mirror.timeline().insert(timelineItem).execute();
 
 		resp.setContentType("text/html; charset=UTF-8");
