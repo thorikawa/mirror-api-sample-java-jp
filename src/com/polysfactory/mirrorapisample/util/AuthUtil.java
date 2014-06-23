@@ -1,4 +1,4 @@
-package com.polysfactory.mirrorapisample;
+package com.polysfactory.mirrorapisample.util;
 
 import java.io.File;
 import java.io.FileInputStream;

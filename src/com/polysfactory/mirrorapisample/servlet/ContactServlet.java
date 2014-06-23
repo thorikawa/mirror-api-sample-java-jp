@@ -1,4 +1,4 @@
-package com.polysfactory.mirrorapisample;
+package com.polysfactory.mirrorapisample.servlet;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -15,6 +15,7 @@ import com.google.api.client.json.jackson.JacksonFactory;
 import com.google.api.services.mirror.Mirror;
 import com.google.api.services.mirror.model.Command;
 import com.google.api.services.mirror.model.Contact;
+import com.polysfactory.mirrorapisample.util.AuthUtil;
 
 @SuppressWarnings("serial")
 public class ContactServlet extends HttpServlet {

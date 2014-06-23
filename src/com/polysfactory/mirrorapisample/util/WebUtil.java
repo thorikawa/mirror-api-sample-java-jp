@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.polysfactory.mirrorapisample;
+package com.polysfactory.mirrorapisample.util;
 
 import javax.servlet.http.HttpServletRequest;
 

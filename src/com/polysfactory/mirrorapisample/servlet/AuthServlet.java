@@ -1,4 +1,4 @@
-package com.polysfactory.mirrorapisample;
+package com.polysfactory.mirrorapisample.servlet;
 
 import java.io.IOException;
 
@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.api.client.auth.oauth2.AuthorizationCodeFlow;
 import com.google.api.client.http.GenericUrl;
+import com.polysfactory.mirrorapisample.util.AuthUtil;
+import com.polysfactory.mirrorapisample.util.WebUtil;
 
 @SuppressWarnings("serial")
 public class AuthServlet extends HttpServlet {

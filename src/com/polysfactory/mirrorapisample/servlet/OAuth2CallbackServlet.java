@@ -1,4 +1,4 @@
-package com.polysfactory.mirrorapisample;
+package com.polysfactory.mirrorapisample.servlet;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse;
+import com.polysfactory.mirrorapisample.util.AuthUtil;
+import com.polysfactory.mirrorapisample.util.WebUtil;
 
 @SuppressWarnings("serial")
 public class OAuth2CallbackServlet extends HttpServlet {
