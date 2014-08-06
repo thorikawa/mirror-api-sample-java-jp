@@ -19,10 +19,12 @@ import com.google.api.client.util.store.DataStoreFactory;
 import com.google.api.client.util.store.MemoryDataStoreFactory;
 
 public class AuthUtil {
+	// アプリケーションに対して許可する権限の範囲
 	private static final List<String> GLASS_SCOPES = Arrays.asList(
 			"https://www.googleapis.com/auth/glass.timeline",
 			"https://www.googleapis.com/auth/glass.location",
 			"https://www.googleapis.com/auth/userinfo.profile");
+	// 認証フロー情報を格納するためのデータストアを生成するファクトリークラスを指定
 	private static final DataStoreFactory FACTORY = new MemoryDataStoreFactory();
 
 	public static Credential getCredential(HttpServletRequest req) {
@@ -35,6 +37,7 @@ public class AuthUtil {
 		}
 		Credential credential = null;
 		try {
+			// ユーザーIDをキーにして保存されているはずのトークンを取得する
 			credential = newAuthorizationCodeFlow().loadCredential(userId);
 		} catch (IOException e) {
 			e.printStackTrace();
