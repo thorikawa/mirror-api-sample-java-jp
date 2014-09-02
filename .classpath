@@ -20,5 +20,6 @@
 	<classpathentry kind="lib" path="libs/google-api-client-jackson2-1.18.0-rc.jar"/>
 	<classpathentry kind="lib" path="libs/google-http-client-jackson-1.18.0-rc.jar"/>
 	<classpathentry kind="lib" path="libs/google-api-services-mirror-v1-rev51-1.18.0-rc.jar"/>
+	<classpathentry kind="lib" path="libs/guava-14.0.1.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

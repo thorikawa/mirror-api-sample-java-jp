@@ -20,6 +20,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>TimelineImageCardServlet</servlet-name>
+		<servlet-class>com.polysfactory.mirrorapisample.servlet.TimelineImageCardServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>ContactServlet</servlet-name>
 		<servlet-class>com.polysfactory.mirrorapisample.servlet.ContactServlet
 		</servlet-class>
@@ -40,6 +45,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<servlet-mapping>
 		<servlet-name>TimelineServlet</servlet-name>
 		<url-pattern>/timeline</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TimelineImageCardServlet</servlet-name>
+		<url-pattern>/imagecard</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>ContactServlet</servlet-name>
